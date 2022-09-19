@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mario_game</title>
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            #canvas {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 100%;
+                max-height: 100%;
+                border: 1px solid #333;
+            }
+
+            #loading {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #roomInfo {
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                font-size: 25px;
+                font-weight: 600;
+            }
+        </style>
+
+        <h1 id="loading">Loading....</h1>
+        <canvas id="canvas"></canvas>
+
+        <img
+            id="player"
+            src="/mario_game/dog_left_right_white.png"
+            alt=""
+            hidden
+        />
+        <div id="roomInfo">
+            <div id="roomid"></div>
+            <div id="p1"></div>
+            <div id="p2"></div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="module" src="./mario_game/index.js"></script>
+    </body>
+</html>
