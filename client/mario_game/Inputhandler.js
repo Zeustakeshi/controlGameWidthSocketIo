@@ -11,7 +11,7 @@ export default class InputHandler {
                 this.lastKey2 = control;
             }
 
-            console.log(playerName + ": " + control);
+        
         });
 
         window.addEventListener("keydown", (e) => {
